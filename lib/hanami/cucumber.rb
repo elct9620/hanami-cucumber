@@ -35,5 +35,7 @@ module Hanami
     if Hanami::CLI.within_hanami_app?
       Hanami::CLI.after "install", Commands::Install
     end
+
+    Bootstrap.boot
   end
 end
