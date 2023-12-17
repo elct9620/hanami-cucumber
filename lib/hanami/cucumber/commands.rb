@@ -9,11 +9,19 @@ module Hanami
         # @since 0.1.0
         # @api private
         def call(*, **)
+          append_gemfile
           copy_env
           copy_configuration
         end
 
         private
+
+        def append_gemfile
+          fs.append(
+            fs.expand_path("Gemfile"),
+            fs.read(fs.expand_path(fs.join("generators", "gemfile"), __dir__))
+          )
+        end
 
         def copy_env
           fs.cp(
