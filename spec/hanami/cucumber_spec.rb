@@ -1,7 +1,7 @@
 # frozen_string_literal: true
 
 RSpec.describe Hanami::Cucumber do
-  it "has a version number" do
-    expect(Hanami::Cucumber::VERSION).not_to be nil
+  it "returns version" do
+    expect(Hanami::Cucumber::VERSION).to eq("0.1.0")
   end
 end

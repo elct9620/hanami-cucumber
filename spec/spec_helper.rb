@@ -2,6 +2,8 @@
 
 require "hanami/cucumber"
 
+TMP = File.join(Dir.pwd, "tmp")
+
 RSpec.configure do |config|
   # Enable flags like --only-failures and --next-failure
   config.example_status_persistence_file_path = ".rspec_status"
@@ -11,5 +13,9 @@ RSpec.configure do |config|
 
   config.expect_with :rspec do |c|
     c.syntax = :expect
+  end
+
+  config.after do
+    FileUtils.rm_rf(TMP) if File.directory?(TMP)
   end
 end
