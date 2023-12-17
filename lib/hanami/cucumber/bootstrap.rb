@@ -15,6 +15,7 @@ module Hanami
         ENV["HANAMI_ENV"] ||= "test"
         require "hanami/prepare"
         require_relative "support/world"
+        require_relative "support/capybara"
       end
 
       def from_cucumber?
