@@ -30,5 +30,9 @@ module Hanami
     gem_loader.setup
     require_relative "cucumber/version"
     require_relative "cucumber/rake_tasks"
+
+    if Hanami::CLI.within_hanami_app?
+      Hanami::CLI.after "install", Commands::Install
+    end
   end
 end
