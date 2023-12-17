@@ -8,6 +8,7 @@ Cucumber and testing support for [Hanami applications](https://github.com/hanami
 
 ## Status
 
+[![Gem Version](https://badge.fury.io/rb/hanami-cucumber.svg)](https://badge.fury.io/rb/hanami-cucumber)
 [![CI](https://github.com/elct9620/hanami-cucumber/actions/workflows/main.yml/badge.svg)](https://github.com/elct9620/hanami-cucumber/actions/workflows/main.yml)
 
 ## Rubies
