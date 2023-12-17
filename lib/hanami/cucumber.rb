@@ -21,7 +21,8 @@ module Hanami
         loader.push_dir(root)
         loader.ignore(
           "#{root}/hanami-cucumber.rb",
-          "#{root}/hanami/cucumber/{rake_tasks,version}.rb"
+          "#{root}/hanami/cucumber/{rake_tasks,version}.rb",
+          "#{root}/hanami/cucumber/support"
         )
         loader.inflector.inflect("cucumber" => "Cucumber")
       end

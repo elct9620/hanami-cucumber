@@ -9,10 +9,18 @@ module Hanami
         # @since 0.1.0
         # @api private
         def call(*, **)
+          copy_env
           copy_configuration
         end
 
         private
+
+        def copy_env
+          fs.cp(
+            fs.expand_path(fs.join("generators", "env.rb"), __dir__),
+            fs.expand_path(fs.join("features", "support", "env.rb"))
+          )
+        end
 
         def copy_configuration
           fs.cp(
